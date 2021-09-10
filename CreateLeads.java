@@ -14,14 +14,14 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CreateLeads extends BaseClass {
 
-	@Test(dataProvider = "sendData")
-	public void loginPage(String fName, String LName, String flName, String LlName) {
+	@Test(dataProvider ="sendData")
+	public void loginPage(String FName, String LName, String FlName, String LlName) {
 
 		driver.findElementByLinkText("Contacts").click();
 		driver.findElementByLinkText("Create Contact").click();
-		driver.findElement(By.id("firstNameField")).sendKeys(fName);
+		driver.findElement(By.id("firstNameField")).sendKeys(FName);
 		driver.findElement(By.id("lastNameField")).sendKeys(LName);
-		driver.findElement(By.id("createContactForm_firstNameLocal")).sendKeys(flName);
+		driver.findElement(By.id("createContactForm_firstNameLocal")).sendKeys(FlName);
 		driver.findElement(By.id("createContactForm_lastNameLocal")).sendKeys(LlName);
 		driver.findElement(By.id("createContactForm_departmentName")).sendKeys("CS");
 		driver.findElement(By.id("createContactForm_description")).sendKeys("NIL");
@@ -45,6 +45,6 @@ public class CreateLeads extends BaseClass {
 	public String[][] sendData() throws IOException {
 
 		return ExcelSheet1.readData("CreateLead");
-		
+
 	}
 }
