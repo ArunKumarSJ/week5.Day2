@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<parameter name="url" value="https://dev70491.service-now.com"></parameter>
+	<parameter name="username" value="admin"></parameter>
+	<parameter name="password" value="Arunkum@r9896"></parameter>
+	<test name="Test">
+		<classes>
+			<class name="Week5Day1Ass.AssignIncident" />
+			<class name="Week5Day1Ass.DeleteIncient" />
+			<class name="Week5Day1Ass.CreateIncident" />
+			<class name="Week5Day1Ass.UpdateExistingIncident" />
+
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
