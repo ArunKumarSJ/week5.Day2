@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<parameter name="url" value="http://leaftaps.com/opentaps/control/logout"></parameter>
+	<parameter name="username" value="demosalesmanager"></parameter>
+	<parameter name="password" value="crmsfa"></parameter>
+	<test name="Test">
+		<classes>
+			<class name="Week5Day1.CreateLeads" />
+			<class name="Week5Day1.DeleteLead" />
+			<class name="Week5Day1.DuplicateLead" />
+			<class name="Week5Day1.EditLead" />
+			<class name="Week5Day1.MergeContact" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
+
