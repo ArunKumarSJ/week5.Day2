@@ -20,7 +20,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class AssignIncident extends BaseClassIncident {
 
 	@Test(dataProvider = "sendData")
-	public void AssignIncident(String UPD) throws InterruptedException {
+	public void AssignIncident(String GRP,String UPD) throws InterruptedException {
 
 		// CLICKING ON OPEN BUTTON
 		driver.findElementByXPath("(//div[text()='Open'])[1]").click();
@@ -39,7 +39,8 @@ public class AssignIncident extends BaseClassIncident {
 		driver.switchTo().window(windowHandlesList.get(1));
 		// SELECTING SOFTWARE GROUP
 		WebElement SGP = driver.findElementByXPath("(//input[@class='form-control'])[1]");
-		SGP.sendKeys("Software");
+		SGP.sendKeys(GRP);
+		Thread.sleep(10000);
 		SGP.sendKeys(Keys.ENTER);
 		// CLICKING ON SOFTWARE
 		driver.findElementByXPath("//a[text()='Software']").click();
